@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paash Reads ✦</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<canvas id="star-canvas"></canvas>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="modal-backdrop" onclick="closeModalOnBackdrop(event)">
+  <div class="modal" id="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-inner">
+      <div class="modal-cover" id="modal-cover"></div>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<div class="container">
+
+  <header>
+    <p class="header-eyebrow">✦ the library of one ✦</p>
+    <h1 class="site-title">Paash Reads</h1>
+    <p class="tagline">a curated collection of worlds between pages</p>
+    <div class="header-divider">
+      <div class="line line-left"></div>
+      <span style="color:var(--gold);font-size:1.1rem">🌹</span>
+      <div class="line line-right"></div>
+    </div>
+  </header>
+
+  <!-- READ -->
+  <section class="section" id="sec-read">
+    <div class="section-head">
+      <span class="badge badge-rose">✦ already devoured ✦</span>
+      <h2 class="section-title">Books I've <span class="accent-rose">Read</span></h2>
+    </div>
+    <div class="books-grid" id="grid-read"></div>
+    <div class="add-area">
+      <button class="add-btn" onclick="toggleForm('read')">✦ add a book</button>
+      <div class="add-form" id="form-read">
+        <input id="input-read-title"  type="text" placeholder="book title…" />
+        <input id="input-read-author" type="text" placeholder="author name…" />
+        <div class="form-actions">
+          <button class="btn-ok"   onclick="addBook('read')">add it ✦</button>
+          <button class="btn-nope" onclick="toggleForm('read')">nevermind</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+  <!-- TO-READ -->
+  <section class="section" id="sec-to-read">
+    <div class="section-head">
+      <span class="badge badge-gold">✦ the waiting list ✦</span>
+      <h2 class="section-title">On My <span class="accent-gold">To-Read</span> Shelf</h2>
+    </div>
+    <div class="books-grid" id="grid-to-read"></div>
+    <div class="add-area">
+      <button class="add-btn add-btn-gold" onclick="toggleForm('to-read')">✦ add to wishlist</button>
+      <div class="add-form add-form-gold" id="form-to-read">
+        <input id="input-to-read-title"  type="text" placeholder="book title…" />
+        <input id="input-to-read-author" type="text" placeholder="author name…" />
+        <div class="form-actions">
+          <button class="btn-ok btn-ok-gold" onclick="addBook('to-read')">add it ✦</button>
+          <button class="btn-nope"           onclick="toggleForm('to-read')">nevermind</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>made with ♡ for a reader who lives between pages</footer>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/api.js"></script>
+<script src="js/render.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

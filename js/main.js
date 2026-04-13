@@ -1,0 +1,3 @@
+renderAll();
+initStars();
+initPetals();
