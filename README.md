@@ -8,7 +8,7 @@ A dramatic, pookie-aesthetic personal reading tracker built for an enthusiastic 
 - **To-Read shelf** — the ever-growing waiting list
 - **Auto-fetch on add** — type a title and author, hit add; the app calls the Google Books API and pulls in the real cover image and description automatically
 - **Click for description** — clicking any book card opens a modal with the full cover and a short blurb
-- **Add & remove** — temporarily add or remove books from either shelf; Enter to submit, Escape to cancel
+- **Add & remove** — add or remove books from either shelf; Enter to submit, Escape to cancel
 - **Dramatic UI** — twinkling starfield, floating petals, glowing gold title, rose/gold card themes
 
 ## Project Structure
@@ -41,6 +41,10 @@ Open `index.html` directly in a browser — no build step, no dependencies, no s
 5. The card appears with the real cover image and description ready in the modal
 
 If no match is found, the book is still added with a placeholder cover and a toast notification.
+
+## Roadmap
+
+See [TODO.md](./TODO.md) for the full plan — upcoming features include persistent storage, moving books from to-read → read, and user login via Google OAuth.
 
 ## Tech
 
